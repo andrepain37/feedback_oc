@@ -30,7 +30,7 @@ class ControllerExtensionModuleFeedback extends Controller {
 			$json['error']['email'] = $this->language->get('error_email');
 		}
 
-		if ((utf8_strlen($this->request->post['phone']) < 10) || (utf8_strlen($this->request->post['phone']) > 255)) {
+		if ((utf8_strlen($this->request->post['phone']) < 3) || (utf8_strlen($this->request->post['phone']) > 255)) {
 			$json['error']['phone'] = $this->language->get('error_phone');
 		}
 
